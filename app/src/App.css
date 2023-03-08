@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  list-style: none;
+}
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+}
+.App section {
+  flex: 1;
+  overflow: auto;
+}
+.App section > div {
+  width: 100%;
+  height: 100%;
+}
+.App section .home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.App section .home header {
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  color: #fff;
+  padding: 10px;
+}
+.App section .home header a {
+  color: #fff;
+}
+.App section .home header .input-box {
+  background: #cccccca1;
+  border-radius: 3px;
+  margin: 0 10px;
+  display: flex;
+  padding: 0 10px;
+  flex: 1;
+}
+.App section .home header .input-box input {
+  flex: 1;
+  background: transparent;
+  margin: 0 5px;
+}
+.App section .home header .input-box ::-webkit-input-placeholder {
+  color: #fff;
+}
+.App section .home main {
+  flex: 1;
+  overflow: auto;
+  background: #efefef;
+}
+.App section .home main .slideshow {
+  height: 200px;
+  position: relative;
+}
+.App section .home main .slideshow .slide {
+  width: 100%;
+  height: 100%;
+}
+.App section .home main .slideshow .slide img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.App section .home main .slideshow .slide .active {
+  display: block;
+}
+.App section .home main .slideshow .show {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App section .home main .slideshow .show ul {
+  display: flex;
+}
+.App section .home main .slideshow .show ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff3a;
+  margin: 0 5px;
+}
+.App section .home main .slideshow .show ul .active {
+  background: rgba(0, 0, 255, 0.473);
+}
+.App section .home main nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin: 10px 0;
+  background: #fff;
+}
+.App section .home main nav div {
+  text-align: center;
+  color: #000;
+}
+.App section .home main nav div a {
+  color: #000;
+}
+.App footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  text-align: center;
+}
+.App footer a {
+  color: #000;
+}
+.App footer .active {
+  color: red;
+}

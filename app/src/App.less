@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	list-style: none;
+}
+html,
+body,
+#root,
+.App {
+	height: 100%;
+	width: 100%;
+}
+.App {
+	display: flex;
+	flex-direction: column;
+	section {
+		flex: 1;
+		overflow: auto;
+		> div {
+			width: 100%;
+			height: 100%;
+		}
+		.home {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			header {
+				display: flex;
+				position: absolute;
+				right: 0;
+				left: 0;
+				z-index: 9;
+				color: #fff;
+				padding: 10px;
+				a {
+					color: #fff;
+				}
+				.input-box {
+					background: #cccccca1;
+					border-radius: 3px;
+					margin: 0 10px;
+					display: flex;
+					padding: 0 10px;
+					flex: 1;
+					input {
+						flex: 1;
+						background: transparent;
+						margin: 0 5px;
+					}
+					::-webkit-input-placeholder {
+						color: #fff;
+					}
+				}
+			}
+			main {
+				flex: 1;
+				overflow: auto;
+				background: #efefef;
+				.slideshow {
+					height: 200px;
+					position: relative;
+					.slide {
+						width: 100%;
+						height: 100%;
+						img {
+							width: 100%;
+							height: 100%;
+							display: none;
+						}
+						.active {
+							display: block;
+						}
+					}
+					.show {
+						position: absolute;
+						bottom: 10px;
+						right: 0;
+						left: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						ul {
+							display: flex;
+							li {
+								width: 10px;
+								height: 10px;
+								border-radius: 50%;
+								background: #ffffff3a;
+								margin: 0 5px;
+							}
+							.active {
+								background: rgba(0, 0, 255, 0.473);
+							}
+						}
+					}
+				}
+				nav {
+					display: flex;
+					justify-content: space-between;
+					padding: 5px 10px;
+					margin: 10px 0;
+					background: #fff;
+					div {
+						text-align: center;
+						color: #000;
+						a {
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 5px 10px;
+		text-align: center;
+		a {
+			color: #000;
+		}
+		.active {
+			color: red;
+		}
+	}
+}
