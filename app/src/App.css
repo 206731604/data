@@ -10,9 +10,13 @@
 html,
 body,
 #root,
-.App {
+.App,
+.classify {
   height: 100%;
   width: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .App {
   display: flex;
@@ -65,7 +69,7 @@ body,
   background: #efefef;
 }
 .App section .home main .slideshow {
-  height: 200px;
+  height: 250px;
   position: relative;
 }
 .App section .home main .slideshow .slide {
@@ -96,11 +100,13 @@ body,
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ffffff3a;
+  background: #000;
+  opacity: 0.2;
   margin: 0 5px;
 }
 .App section .home main .slideshow .show ul .active {
-  background: rgba(0, 0, 255, 0.473);
+  background: #007aff;
+  opacity: 1;
 }
 .App section .home main nav {
   display: flex;
@@ -115,6 +121,22 @@ body,
 }
 .App section .home main nav div a {
   color: #000;
+}
+.App section .home main .recom-nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.App section .home main .recom-nav .line {
+  width: 35%;
+  height: 1px;
+  background: #d4d4d4;
+}
+.App section .home main .recom-nav .recom-wrap {
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
 }
 .App footer {
   display: flex;
@@ -158,6 +180,9 @@ body,
   overflow: auto;
   display: flex;
 }
+.classify .item main .left {
+  overflow: auto;
+}
 .classify .item main .left > div {
   border-bottom: 1px solid #efefef;
   padding: 10px 10px;
@@ -165,4 +190,31 @@ body,
 }
 .classify .item main .left .active {
   color: red;
+}
+.classify .item main .right {
+  flex: 1;
+  overflow: auto;
+  background: #efefef;
+  padding: 5px 15px;
+}
+.classify .item main .right .card-box .title {
+  padding: 10px 0;
+}
+.classify .item main .right .card-box .card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.classify .item main .right .card-box .card > div {
+  width: 33%;
+  padding: 10px;
+}
+.classify .item main .right .card-box .card > div img {
+  width: 100%;
+}
+.classify .item main .right .card-box .card > div p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

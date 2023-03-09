@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { SearchOutlined } from '@ant-design/icons'
+import { HeartOutlined, SearchOutlined } from '@ant-design/icons'
 import Banner from '../../components/Banner'
 import ajax from '../../utils/request'
 import { NavLink } from 'react-router-dom'
 function Index() {
 	const [picture, setPicture] = useState([])
 	const [nav, setNav] = useState([])
+	const [recom, setRecom] = useState([])
 	useEffect(() => {
 		ajax.get("http://vueshop.glbuys.com/api/home/index/slide?token=1ec949a15fb709370f").then(res => {
 			setPicture(res.data)
 		})
 		ajax.get("http://vueshop.glbuys.com/api/home/index/nav?token=1ec949a15fb709370f").then(res => {
 			setNav(res.data)
+		})
+		ajax.get("http://vueshop.glbuys.com/api/home/index/recom?token=1ec949a15fb709370f").then(res => {
+
 		})
 	}, [])
 	return (
@@ -41,6 +45,15 @@ function Index() {
 						</div>)) : ""
 					}
 				</nav>
+				<div className="recom-nav">
+					<div className="line"></div>
+					<div className="recom-wrap">
+						<HeartOutlined />
+						为你推荐
+					</div>
+					<div className="line"></div>
+				</div>
+				
 			</main>
 		</div>
 	)

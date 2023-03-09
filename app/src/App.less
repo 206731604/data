@@ -10,9 +10,13 @@
 html,
 body,
 #root,
-.App {
+.App,
+.classify {
 	height: 100%;
 	width: 100%;
+}
+::-webkit-scrollbar {
+	display: none;
 }
 .App {
 	display: flex;
@@ -61,7 +65,7 @@ body,
 				overflow: auto;
 				background: #efefef;
 				.slideshow {
-					height: 200px;
+					height: 250px;
 					position: relative;
 					.slide {
 						width: 100%;
@@ -89,11 +93,13 @@ body,
 								width: 10px;
 								height: 10px;
 								border-radius: 50%;
-								background: #ffffff3a;
+								background: #000;
+								opacity: 0.2;
 								margin: 0 5px;
 							}
 							.active {
-								background: rgba(0, 0, 255, 0.473);
+								background: #007aff;
+								opacity: 1;
 							}
 						}
 					}
@@ -110,6 +116,22 @@ body,
 						a {
 							color: #000;
 						}
+					}
+				}
+				.recom-nav {
+					height: 50px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.line {
+						width: 35%;
+						height: 1px;
+						background: #d4d4d4;
+					}
+					.recom-wrap {
+						width: 22%;
+						display: flex;
+						justify-content: space-between;
 					}
 				}
 			}
@@ -156,6 +178,7 @@ body,
 			overflow: auto;
 			display: flex;
 			.left {
+				overflow: auto;
 				> div {
 					border-bottom: 1px solid #efefef;
 					padding: 10px 10px;
@@ -163,6 +186,35 @@ body,
 				}
 				.active {
 					color: red;
+				}
+			}
+			.right {
+				flex: 1;
+				overflow: auto;
+				background: #efefef;
+				padding: 5px 15px;
+				.card-box {
+					.title {
+						padding: 10px 0;
+					}
+					.card {
+						display: flex;
+						flex-wrap: wrap;
+						background: #fff;
+						> div {
+							width: 33%;
+							padding: 10px;
+							img {
+								width: 100%;
+							}
+							p {
+								display: -webkit-box;
+								-webkit-line-clamp: 1;
+								-webkit-box-orient: vertical;
+								overflow: hidden;
+							}
+						}
+					}
 				}
 			}
 		}

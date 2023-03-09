@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import Item from '../Item'
+const Item = lazy(() => import('../Item'))
 
 function Classify() {
     return (
