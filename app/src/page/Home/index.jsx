@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import { NavLink, Redirect, Route, Switch } from 'react-router-dom'
-import Index from '../Index'
-import Cart from '../Cart'
-import My from '../My'
+const Index = lazy(() => import('../Index'))
+const Cart = lazy(() => import('../Cart'))
+const My = lazy(() => import('../My'))
 function Home() {
 	const nav = [
 		{

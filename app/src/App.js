@@ -1,9 +1,9 @@
-import React from "react";
+import React, { lazy } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./page/Home";
-import Login from "./Login";
-import Goods from "./page/Goods";
+const Home = lazy(() => import("./page/Home"));
+const Goods = lazy(() => import("./page/Goods"));
+const Login = lazy(() => import("./Login"));
 const App = () => {
 	return (
 		<BrowserRouter>

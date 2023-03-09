@@ -118,7 +118,7 @@ body,
 }
 .App footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px 10px;
   text-align: center;
 }
@@ -126,5 +126,43 @@ body,
   color: #000;
 }
 .App footer .active {
+  color: red;
+}
+.classify {
+  display: flex;
+  flex-direction: column;
+}
+.classify > div {
+  height: 100%;
+}
+.classify .item {
+  display: flex;
+  flex-direction: column;
+}
+.classify .item header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #efefef;
+}
+.classify .item header .input-box {
+  border: 1px solid #b2b2b2;
+  flex: 1;
+  margin: 0 10px;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+.classify .item main {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+}
+.classify .item main .left > div {
+  border-bottom: 1px solid #efefef;
+  padding: 10px 10px;
+  text-align: center;
+}
+.classify .item main .left .active {
   color: red;
 }
