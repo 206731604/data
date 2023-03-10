@@ -12,7 +12,6 @@ function Index() {
 		background: "transparent"
 	})
 	useEffect(() => {
-
 		ajax.get("http://vueshop.glbuys.com/api/home/index/slide?token=1ec949a15fb709370f").then(res => {
 			setPicture(res.data)
 		})
@@ -73,15 +72,17 @@ function Index() {
 					{
 						recom.length ? recom.map((v, i) => (
 							<div key={i}>
-								<div className="recom-img">
-									<img src={v.image} alt="" />
-								</div>
-								<div className="recom-title">
-									{v.title}
-								</div>
-								<div className="recom-price">
-									￥{v.price}
-								</div>
+								<NavLink to={`/goods/details/item?gid=${v.gid}`}>
+									<div className="recom-img">
+										<img src={v.image} alt="" />
+									</div>
+									<div className="recom-title">
+										{v.title}
+									</div>
+									<div className="recom-price">
+										￥{v.price}
+									</div>
+								</NavLink>
 							</div>
 						)) : ""
 					}
