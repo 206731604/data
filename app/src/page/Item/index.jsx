@@ -10,10 +10,12 @@ const Item = ({ history, location }) => {
     useEffect(() => {
         if (location.search) {
             let str = location.search.substr(1)
-            let Cid = str.split('=')[1]
-            acquire(Cid)
-        } else {
+            let cid = str.split('=')[1]
             acquire(cid)
+        } else {
+            ajax.get(`http://vueshop.glbuys.com/api/home/category/show?cid=${cid}&token=1ec949a15fb709370f`).then(res => {
+                setShow(res.data)
+            })
         }
         ajax.get("http://vueshop.glbuys.com/api/home/category/menu?token=1ec949a15fb709370f").then(res => {
             setMenu(res.data)

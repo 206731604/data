@@ -138,6 +138,31 @@ body,
   display: flex;
   justify-content: space-between;
 }
+.App section .home main .recom-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.App section .home main .recom-box > div {
+  width: 45%;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.App section .home main .recom-box .recom-img {
+  width: 100%;
+}
+.App section .home main .recom-box .recom-img img {
+  width: 100%;
+}
+.App section .home main .recom-box .recom-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.App section .home main .recom-box .recom-price {
+  color: red;
+}
 .App footer {
   display: flex;
   justify-content: space-around;
