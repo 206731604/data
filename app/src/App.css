@@ -243,3 +243,18 @@ body,
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.classify .details {
+  display: flex;
+  flex-direction: column;
+}
+.classify .details header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.classify .details header .center {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
