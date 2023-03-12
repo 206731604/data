@@ -31,7 +31,6 @@ const Item = ({ history, location }) => {
     const back = () => {
         history.push("/")
     }
-    // console.log(cid)
     return (
         <div className='item'>
             <header>
