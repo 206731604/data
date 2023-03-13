@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { HeartOutlined, SearchOutlined } from '@ant-design/icons'
+import { HeartOutlined, SearchOutlined, UserOutlined } from '@ant-design/icons'
 import Banner from '../../components/Banner'
 import ajax from '../../utils/request'
 import { NavLink } from 'react-router-dom'
-function Index() {
+function Index({ history, location }) {
 	const [picture, setPicture] = useState([])
 	const [nav, setNav] = useState([])
 	const [recom, setRecom] = useState([])
@@ -44,7 +44,7 @@ function Index() {
 				</div>
 				<div className="right">
 					{
-						localStorage.token ? <span className='iconfont icon-list'></span> : '登录'
+						localStorage.token ? <UserOutlined onClick={() => history.push("/my")} /> : <p onClick={() => history.push("/login", { search: location.pathname })}>登录</p>
 					}
 				</div>
 			</header>
@@ -71,18 +71,16 @@ function Index() {
 				<div className="recom-box">
 					{
 						recom.length ? recom.map((v, i) => (
-							<div key={i}>
-								<NavLink to={`/goods/details/item?gid=${v.gid}`}>
-									<div className="recom-img">
-										<img src={v.image} alt="" />
-									</div>
-									<div className="recom-title">
-										{v.title}
-									</div>
-									<div className="recom-price">
-										￥{v.price}
-									</div>
-								</NavLink>
+							<div key={i} onClick={() => history.push(`/goods/details/item?gid=${v.gid}`, { search: location.pathname })}>
+								<div className="recom-img">
+									<img src={v.image} alt="" />
+								</div>
+								<div className="recom-title">
+									{v.title}
+								</div>
+								<div className="recom-price">
+									￥{v.price}
+								</div>
 							</div>
 						)) : ""
 					}

@@ -11,7 +11,8 @@ html,
 body,
 #root,
 .App,
-.classify {
+.classify,
+.login {
   height: 100%;
   width: 100%;
 }
@@ -142,11 +143,15 @@ body,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  color: #000;
 }
 .App section .home main .recom-box > div {
   width: 45%;
   background: #fff;
   margin-bottom: 10px;
+}
+.App section .home main .recom-box > div a {
+  color: #000;
 }
 .App section .home main .recom-box .recom-img {
   width: 100%;
@@ -252,9 +257,37 @@ body,
   height: 50px;
   align-items: center;
   justify-content: space-between;
+  padding: 0 10px;
 }
 .classify .details header .center {
+  width: 70%;
   height: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.classify .details header .center > div {
+  width: auto;
+  margin: 0 9%;
+  height: 50px;
+  line-height: 50px;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.classify .details header .center > div a {
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  color: #000;
+}
+.classify .details header .center .active {
+  border-bottom: 1px solid #cc8418;
+}
+.login {
+  padding: 40px 20px;
+}
+.login .title {
+  padding: 10px 0;
+  font-size: 30px;
+  text-align: center;
 }

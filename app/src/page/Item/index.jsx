@@ -48,7 +48,7 @@ const Item = ({ history, location }) => {
                 </div>
                 <div className="right">
                     {
-                        show === '没有数据' ? "没有数据" : show.map((v, i) => (<Card title={v.title} goods={v.goods} key={i} />))
+                        show === '没有数据' ? "没有数据" : show.map((v, i) => (<Card history={history} location={location} title={v.title} goods={v.goods} key={i} />))
                     }
                 </div>
             </main>

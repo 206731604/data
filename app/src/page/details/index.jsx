@@ -3,6 +3,7 @@ import React, { lazy, useEffect, useState } from 'react'
 import { NavLink, Redirect, Route, Switch } from 'react-router-dom'
 const Item = lazy(() => import('../../detail/item'))
 function Details({ history }) {
+    console.log(history)
     const nav = [
         {
             title: "商品",
@@ -26,7 +27,7 @@ function Details({ history }) {
     return (
         <div className="details">
             <header>
-                <div className="left"><LeftOutlined /></div>
+                <div className="left"><LeftOutlined style={{ fontSize: 25 }} /></div>
                 <div className="center">
                     {
                         nav.length ? nav.map((v, i) => (
@@ -35,7 +36,7 @@ function Details({ history }) {
                         )) : ""
                     }
                 </div>
-                <div className="right"><ShoppingCartOutlined /></div>
+                <div className="right"><ShoppingCartOutlined style={{ fontSize: 25 }} /></div>
             </header>
             <div className="sub-page">
                 <Switch>
