@@ -2,6 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://blogs.zdldove.top",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@redux-devtools/extension": "^3.2.5",
