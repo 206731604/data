@@ -3,12 +3,14 @@ import "./App.css";
 import { Modal, Table, Upload } from "antd";
 import ImgUpload from "./components/ImgUpload";
 import { useSelector } from "react-redux";
+import CustomList from "./components/CustomList";
 const App = () => {
 	const imgList = useSelector(state => state.imgList);
 	console.log(imgList);
 	return (
 		<div className="App">
 			<ImgUpload imgList={imgList} />
+			<CustomList />
 		</div>
 	);
 };

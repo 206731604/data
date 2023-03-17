@@ -3,7 +3,6 @@ import { Modal, Table, Upload } from "antd"
 import { useDispatch } from "react-redux"
 import { asyncImgList } from "../reducers/imgList"
 const ImgUpload = ({ imgList }) => {
-    console.log(imgList)
     const dispatch = useDispatch()
     const [fileList, setFileList] = useState(imgList)
     const uploadButton = (
@@ -17,13 +16,15 @@ const ImgUpload = ({ imgList }) => {
         </div>
     )
     const handleChange = ({ fileList: newFileList }) => {
-        let List = fileList.map((v, i) => {
+        console.log(fileList)
+        let List = newFileList.map((v, i) => {
             if (v.response && v.response.code == 0) {
                 return { uid: i, url: v.response.result }
             } else {
                 return { uid: i, url: "" }
             }
         })
+        console.log(fileList)
         dispatch(asyncImgList(List))
         setFileList(newFileList)
     }
