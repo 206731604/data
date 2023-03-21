@@ -16,15 +16,16 @@ const ImgUpload = ({ imgList }) => {
         </div>
     )
     const handleChange = ({ fileList: newFileList }) => {
-        console.log(fileList)
         let List = newFileList.map((v, i) => {
             if (v.response && v.response.code == 0) {
-                return { uid: i, url: v.response.result }
+                return {
+                    uid: v.originFileObj ? v.originFileObj.uid : v.uid, url: v.response.result,
+                    status: v.status, type: v.type
+                }
             } else {
-                return { uid: i, url: "" }
+                return { uid: v.originFileObj ? v.originFileObj.uid : v.uid, url: "", status: v.status, type: v.type }
             }
         })
-        console.log(fileList)
         dispatch(asyncImgList(List))
         setFileList(newFileList)
     }
