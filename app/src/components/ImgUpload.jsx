@@ -1,5 +1,5 @@
-import React, { Component, useEffect, useState } from "react"
-import { Modal, Table, Upload } from "antd"
+import { Upload } from "antd"
+import React, { useState } from "react"
 import { useDispatch } from "react-redux"
 import { asyncImgList } from "../reducers/imgList"
 const ImgUpload = ({ imgList }) => {

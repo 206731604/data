@@ -1,8 +1,7 @@
-import React, { Component, useEffect, useState } from "react";
-import "./App.css";
-import { Modal, Table, Upload } from "antd";
-import ImgUpload from "./components/ImgUpload";
-import { useSelector } from "react-redux";
+import React from "react"
+import { useSelector } from "react-redux"
+import "./App.css"
+import ImgUpload from "./components/ImgUpload"
 const App = () => {
 	const imgList = useSelector(state => state.imgList);
 	return (

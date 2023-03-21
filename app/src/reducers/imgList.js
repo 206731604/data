@@ -1,5 +1,4 @@
 const initialState = [];
-
 const imgList = (state = initialState, { type, payload }) => {
 	switch (type) {
 		case "set_imgList": {
