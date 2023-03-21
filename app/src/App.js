@@ -5,7 +5,6 @@ import ImgUpload from "./components/ImgUpload";
 import { useSelector } from "react-redux";
 const App = () => {
 	const imgList = useSelector(state => state.imgList);
-	console.log(imgList);
 	return (
 		<div className="App">
 			<ImgUpload imgList={imgList} />
