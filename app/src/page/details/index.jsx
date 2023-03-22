@@ -24,10 +24,13 @@ function Details({ history }) {
             setSearch(history.location.search)
         }
     })
+    const back = () => {
+        history.replace("/")
+    }
     return (
         <div className="details">
             <header>
-                <div className="left"><LeftOutlined style={{ fontSize: 25 }} /></div>
+                <div className="left" onClick={back}><LeftOutlined style={{ fontSize: 25 }} /></div>
                 <div className="center">
                     {
                         nav.length ? nav.map((v, i) => (

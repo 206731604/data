@@ -29,7 +29,9 @@ const Item = ({ history, location }) => {
         })
     }
     const back = () => {
-        history.push("/")
+        // history.re   ("/")
+        // history.
+        history.replace('/')
     }
     return (
         <div className='item'>
